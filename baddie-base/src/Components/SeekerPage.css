@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('/public/images/tatreez.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 56, 38, 0.8); /* Green overlay */
+    z-index: -1; /* Place it behind the content */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: hue-rotate(90deg); /* Apply green hue */
+    z-index: -2; /* Place it behind the green overlay */
+  }
+  
+  .seeker-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .logo {
+    width: 150px;
+  }
+  
+  .seeker-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    z-index: 1;
+  }
+  
+  .seeker-content h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .seeker-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .seeker-controls select, .seeker-controls input {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 2px solid white;
+    background-color: rgba(139, 0, 0, 0.8); /* Blood red with transparency */
+    color: white;
+  }
+  
+  .seeker-controls input::placeholder {
+    color: white;
+  }
+  
