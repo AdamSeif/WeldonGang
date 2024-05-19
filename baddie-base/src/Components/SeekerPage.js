@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SeekerPage.css';
 
 const SeekerPage = () => {
   const [searchType, setSearchType] = useState('country');
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    // Implement your search logic here
+    console.log(`Searching for ${searchQuery} by ${searchType}`);
+    // Navigate to results page (assuming results page path is '/results')
+    navigate('/results', { state: { searchType, searchQuery } });
+  };
 
   return (
     <div className="seeker-page">
@@ -17,9 +27,16 @@ const SeekerPage = () => {
             <option value="language">Language</option>
             <option value="ethnicity">Ethnicity</option>
           </select>
-          <input type="text" placeholder={`Search by ${searchType}`} />
+          <input
+            type="text"
+            placeholder={`Search by ${searchType}`}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <button className="search-button" onClick={handleSearch}>Search</button>
         </div>
       </div>
+      <button className="home-button" onClick={() => navigate('/')}>Home</button>
     </div>
   );
 };

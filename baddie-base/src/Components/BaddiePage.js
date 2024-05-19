@@ -1,7 +1,11 @@
+// BaddiePage.js
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BaddiePage.css';
 
 const BaddiePage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="baddie-page">
       <header className="baddie-header">
@@ -10,10 +14,11 @@ const BaddiePage = () => {
       <div className="baddie-content">
         <h1>Help us represent you better!</h1>
         <div className="baddie-buttons">
-          <button className="baddie-add-button">Add new ethnicity/background</button>
-          <button className="baddie-edit-button">Edit existing ethnicity/background</button>
+          <button className="baddie-add-button" onClick={() => navigate('/add')}>Add new ethnicity/background</button>
+          <button className="baddie-edit-button" onClick={() => navigate('/edit')}>Edit existing ethnicity/background</button>
         </div>
       </div>
+      <button className="home-button" onClick={() => navigate('/')}>Home</button>
     </div>
   );
 };

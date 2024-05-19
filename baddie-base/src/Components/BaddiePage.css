@@ -1,90 +1,108 @@
+/* BaddiePage.css */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: url('/public/images/tatreez.png') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(15, 56, 38, 0.8); /* Green overlay */
-    z-index: -1; /* Place it behind the content */
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: hue-rotate(90deg); /* Apply green hue */
-    z-index: -2; /* Place it behind the green overlay */
-  }
-  
-  .baddie-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding: 20px;
-  }
-  
-  .logo {
-    width: 150px;
-  }
-  
-  .baddie-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    z-index: 1;
-  }
-  
-  .baddie-content h1 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .baddie-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .baddie-add-button, .baddie-edit-button {
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 1.5em;
-    cursor: pointer;
-    border: 2px solid white; /* White border */
-    border-radius: 10px;
-    color: #fff;
-    background-color: #8B0000; /* Blood red color */
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  .baddie-add-button:hover, .baddie-edit-button:hover {
-    background-color: #600000; /* Darker red for hover effect */
-    transform: scale(1.1); /* Popping effect */
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('/public/images/tatreez.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 56, 38, 0.8); /* Green overlay */
+  z-index: -1; /* Place it behind the content */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: hue-rotate(90deg); /* Apply green hue */
+  z-index: -2; /* Place it behind the green overlay */
+}
+
+.baddie-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.baddie-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.baddie-content h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.baddie-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.baddie-add-button, .baddie-edit-button {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  border: 2px solid white; /* White border */
+  border-radius: 10px;
+  color: #fff;
+  background-color: #8B0000; /* Blood red color */
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.baddie-add-button:hover, .baddie-edit-button:hover {
+  background-color: #600000; /* Darker red for hover effect */
+  transform: scale(1.1); /* Popping effect */
+}
+
+.home-button {
+  position: absolute;
+  bottom: 20px;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  cursor: pointer;
+  border: 2px solid white; /* White border */
+  border-radius: 10px;
+  color: #fff;
+  background-color: #8B0000; /* Blood red color */
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.home-button:hover {
+  background-color: #600000; /* Darker red for hover effect */
+  transform: scale(1.1); /* Popping effect */
+}
